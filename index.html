@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Workout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏋️</text></svg>">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="action-buttons">
+            <button onclick="openNote()" title="Anotações">📝</button>
+            <button onclick="openEdit()" title="Editar Treino">✏️</button>
+        </div>
+        <div id="day-badge" class="badge">Carregando...</div>
+    </div>
+
+    <main class="container">
+        <section class="timer-card">
+            <div class="timer-display" id="display">00:00</div>
+            
+            <div class="input-group">
+                <input type="number" id="secondsInput" placeholder="Segundos" min="1">
+                <button id="setTimer">Definir</button>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn-start">START</button>
+                <button id="pauseBtn" class="btn-pause">PAUSE</button>
+                <button id="resetBtn" class="btn-reset">RESET</button>
+            </div>
+        </section>
+
+        <div class="workout-area-wrapper">
+            <section class="workout-card">
+                <div class="tabs">
+                    <button class="tab-btn" id="btn-monday" onclick="openTab(event, 'monday')">MON</button>
+                    <button class="tab-btn" id="btn-tuesday" onclick="openTab(event, 'tuesday')">TUE</button>
+                    <button class="tab-btn" id="btn-wednesday" onclick="openTab(event, 'wednesday')">WED</button>
+                    <button class="tab-btn" id="btn-thursday" onclick="openTab(event, 'thursday')">THU</button>
+                    <button class="tab-btn" id="btn-friday" onclick="openTab(event, 'friday')">FRI</button>
+                    <button class="tab-btn" id="btn-saturday" onclick="openTab(event, 'saturday')">SAT</button>
+                </div>
+
+                <div id="monday" class="tab-content">
+                    <div class="scroll-area"><ul class="workout-list" id="listMon"></ul></div>
+                </div>
+                <div id="tuesday" class="tab-content">
+                    <div class="scroll-area"><ul class="workout-list" id="listTue"></ul></div>
+                </div>
+                <div id="wednesday" class="tab-content">
+                    <div class="scroll-area"><ul class="workout-list" id="listWed"></ul></div>
+                </div>
+                <div id="thursday" class="tab-content">
+                    <div class="scroll-area"><ul class="workout-list" id="listThu"></ul></div>
+                </div>
+                <div id="friday" class="tab-content">
+                    <div class="scroll-area"><ul class="workout-list" id="listFri"></ul></div>
+                </div>
+                <div id="saturday" class="tab-content">
+                    <div class="scroll-area"><ul class="workout-list" id="listSat"></ul></div>
+                </div>
+            </section>
+
+            <div class="vertical-progress-wrap">
+                <div class="progress-track">
+                    <div id="vertical-progress-bar"></div>
+                </div>
+                <span id="vertical-progress-text">0%</span>
+            </div>
+        </div>
+    </main>
+
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Anotações</h3>
+                <span class="close-btn" onclick="closeNote()">&times;</span>
+            </div>
+            <textarea id="gymNotes" placeholder="Escreva suas anotações aqui... (Salvo automaticamente)"></textarea>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Editar: 
+                    <select id="editDaySelect" onchange="loadWorkoutForEdit()">
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                    </select>
+                </h3>
+                <span class="close-btn" onclick="closeEdit()">&times;</span>
+            </div>
+            <p class="hint">Adicione um exercício por linha.</p>
+            <textarea id="editWorkoutText"></textarea>
+            <button class="save-btn" onclick="saveWorkout()">Salvar Treino</button>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="imageModalTitle">Exercício</h3>
+                <span class="close-btn" onclick="closeImage()">&times;</span>
+            </div>
+            <img id="exerciseImage" src="" alt="Imagem do Exercício">
+            <p id="noImageText">Sem imagem configurada.</p>
+        </div>
+    </div>
+
+    <audio id="alertSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>

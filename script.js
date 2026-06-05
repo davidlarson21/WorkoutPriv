@@ -1,51 +1,48 @@
 let activeTabKey = 'monday';
 
 const exerciseImages = {
-    "Barbell Bench Press — 4x5–8": "img/Barbell-Bench-Press.jpg",
-    "Lat Pulldown — 4x6–8": "img/Lat-Pulldown.jpg",
-    "Incline Dumbbell Bench Press — 3x8–10": "img/Incline Dumbbell Bench Press.jpg",
-    "Barbell Bent-Over Row — 3x6–10": "img/Barbell Bent-Over Row.jpg",
-    "Machine Overhead Press — 3x6–10": "img/Machine Overhead Press.jpg",
-    "Dumbbell Lateral Raise — 3x15–20": "img/Dumbbell Lateral Raise.jpg",
-    "Barbell Curl — 3x8–12": "img/Barbell Curl.jpg",
-    "Cable Triceps Pushdown — 3x8–12": "img/Cable Triceps Pushdown.jpg",
+    "Barbell Bench Press": "img/Barbell Bench Press.jpg",
+    "Lat Pulldown": "img/Lat Pulldown.jpg",
+    "Incline Dumbbell Bench Press": "img/Incline Dumbbell Bench Press.jpg",
+    "Barbell Bent Over Row": "img/Barbell Bent Over Row.jpg",
+    "Machine Overhead Press": "img/Machine Overhead Press.jpg",
+    "Dumbbell Lateral Raise": "img/Dumbbell Lateral Raise.jpg",
+    "Barbell Curl": "img/Barbell Curl.jpg",
+    "Cable Triceps Pushdown": "img/Cable Triceps Pushdown.jpg",
 
-    "Barbell Back Squat — 4x5–8": "img/Barbell Back Squat.jpg",
-    "Romanian Deadlift (RDL) — 4x6–8": "img/Romanian Deadlift (RDL).jpg",
-    "Leg Press — 3x10–12": "img/Leg Press.jpg",
-    "Lying Leg Curl — 3x10–12": "img/Lying Leg Curl.jpg",
-    "Standing Calf Raise — 5x10–15": "img/Standing Calf Raise.jpg",
+    "Barbell Back Squat": "img/Barbell Back Squat.jpg",
+    "Romanian Deadlift (RDL)": "img/Romanian Deadlift (RDL).jpg",
+    "Leg Press": "img/Leg Press.jpg",
+    "Seated Leg Curl": "img/Seated Leg Curl.jpg",
+    "Standing Calf Raise": "img/Standing Calf Raise.jpg",
 
-    "Incline Dumbbell Bench Press — 4x8–12": "img/Incline Dumbbell Bench Press.jpg",
-    "Dumbbell Fly — 3x12–15": "img/Dumbbell Fly.jpg",
-    "Dumbbell Overhead Press — 3x8–12": "img/Dumbbell Overhead Press.jpg",
-    "Dumbbell Lateral Raise — 5x12–20": "img/Dumbbell Lateral Raise.jpg",
-    "Cable Rope Triceps Pushdown — 3x10–15": "img/Cable Rope Triceps Pushdown.jpg",
-    "Single-Arm Cable Triceps Pushdown — 3x12–15": "img/Single-Arm Cable Triceps Pushdown.jpg",
-    "Light Pec Deck Fly — 3x15": "img/Light Pec Deck Fly.jpg",
+    "Dumbbell Fly": "img/Dumbbell Fly.jpg",
+    "Dumbbell Overhead Press": "img/Dumbbell Overhead Press.jpg",
+    "Cable Rope Triceps Pushdown": "img/Cable Rope Triceps Pushdown.jpg",
+    "Single Arm Cable Triceps Pushdown": "img/Single Arm Cable Triceps Pushdown.jpg",
+    "Crossbody Cable Triceps Ext": "img/Crossbody Cable Triceps Ext.jpg",
+    "Light Pec Deck Fly": "img/Light Pec Deck Fly.jpg",
 
-    "Wide-Grip Lat Pulldown — 3x8–12": "img/Wide-Grip Lat Pulldown.jpg",
-    "Machine Plate-Loaded Row — 4x8–12": "img/Machine Plate-Loaded Row.jpg",
-    "Cable Pullover — 3x12–15": "img/Cable Pullover.jpg",
-    "Face Pull — 4x12–20": "img/Face Pull.jpg",
-    "Incline Dumbbell Curl — 3x10–12": "img/Incline Dumbbell Curl Fly.jpg",
-    "Dumbbell Hammer Curl — 3x10–12": "img/Dumbbell Hammer Curl.jpg",
-    "Dumbbell Shrug — 3x10–15": "img/Dumbbell Shrug.jpg",
-    "Single-Arm Cable Curl — 3x12–15": "img/Single-Arm Cable Curl.jpg",
+    "Wide Grip Lat Pulldown": "img/Wide Grip Lat Pulldown.jpg",
+    "Machine Plate Loaded Row": "img/Machine Plate Loaded Row.jpg",
+    "Cable Pullover": "img/Cable Pullover.jpg",
+    "Face Pull": "img/Face Pull.jpg",
+    "Incline Dumbbell Curl": "img/Incline Dumbbell Curl.jpg",
+    "Dumbbell Hammer Curl": "img/Dumbbell Hammer Curl.jpg",
+    "Dumbbell Shrug": "img/Dumbbell Shrug.jpg",
+    "Single Arm Cable Curl": "img/Single Arm Cable Curl.jpg",
 
-    "Hack Squat — 4x8–12": "img/Hack Squat.jpg",
-    "Leg Extension — 3x12–15": "img/Leg Extension.jpg",
-    "Lying Leg Curl — 4x10–15": "img/Lying Leg Curl.jpg",
-    "Dumbbell Romanian Deadlift — 3x10–12": "img/Dumbbell Romanian Deadlift.jpg",
-    "Bulgarian Split Squat — 3x10–12": "img/Bulgarian Split Squat.jpg",
-    "Seated Calf Raise — 5x12–20": "img/Seated Calf Raise.jpg",
-    "Seated Hip Adductor Machine — 3x15–20": "img/Seated Hip Adductor Machine.jpg",
+    "Hack Squat": "img/Hack Squat.jpg",
+    "Leg Extension": "img/Leg Extension.jpg",
+    "Dumbbell Romanian Deadlift": "img/Dumbbell Romanian Deadlift.jpg",
+    "Bulgarian Split Squat": "img/Bulgarian Split Squat.jpg",
+    "Seated Calf Raise": "img/Seated Calf Raise.jpg",
+    "Seated Hip Adductor Machine": "img/Seated Hip Adductor Machine.jpg",
 
-    "Dumbbell Lateral Raise — 6x15–20": "img/Dumbbell Lateral Raise.jpg",
-    "Alternating Dumbbell Curl — 4x10–15": "img/Alternating Dumbbell Curl.jpg",
-    "Dumbbell Triceps Kickback — 4x10–15": "img/Dumbbell Triceps Kickback.jpg",
-    "One-Arm Dumbbell Row — 4x Close to failure": "img/One-Arm Dumbbell Row.jpg",
-    "Dumbbell Reverse Fly — 3x15–20": "img/Dumbbell Reverse Fly.jpg",
+    "Alternating Dumbbell Curl": "img/Alternating Dumbbell Curl.jpg",
+    "Dumbbell Triceps Kickback": "img/Dumbbell Triceps Kickback.jpg",
+    "One Arm Dumbbell Row": "img/One Arm Dumbbell Row.jpg",
+    "Dumbbell Reverse Fly": "img/Dumbbell Reverse Fly.jpg",
 };
 
 const defaultTreinos = {
@@ -53,7 +50,7 @@ const defaultTreinos = {
         "Barbell Bench Press — 4x5–8",
         "Lat Pulldown — 4x6–8",
         "Incline Dumbbell Bench Press — 3x8–10",
-        "Barbell Bent-Over Row — 3x6–10",
+        "Barbell Bent Over Row — 3x6–10",
         "Machine Overhead Press — 3x6–10",
         "Dumbbell Lateral Raise — 3x15–20",
         "Barbell Curl — 3x8–12",
@@ -67,7 +64,7 @@ const defaultTreinos = {
         "Barbell Back Squat — 4x5–8",
         "Romanian Deadlift (RDL) — 4x6–8",
         "Leg Press — 3x10–12",
-        "Lying Leg Curl — 3x10–12",
+        "Seated Leg Curl — 3x10–12",
         "Standing Calf Raise — 5x10–15",
         "Cardio: 20 min Zone 2"
     ],
@@ -77,7 +74,7 @@ const defaultTreinos = {
         "Dumbbell Overhead Press — 3x8–12",
         "Dumbbell Lateral Raise — 5x12–20",
         "Cable Rope Triceps Pushdown — 3x10–15",
-        "Crossbody Cable Triceps Ext. — 3x12–15",
+        "Crossbody Cable Triceps Ext — 3x12–15",
         "Light Pec Deck Fly — 3x15",
         "CORE: Lying Leg Raise — 3x15",
         "CORE: Abdominal Crunch — 3x12–15",
@@ -85,20 +82,20 @@ const defaultTreinos = {
         "Cardio: 20–25 min Zone 2"
     ],
     thursday: [
-        "Wide-Grip Lat Pulldown — 3x8–12",
-        "Machine Plate-Loaded Row — 4x8–12",
+        "Wide Grip Lat Pulldown — 3x8–12",
+        "Machine Plate Loaded Row — 4x8–12",
         "Cable Pullover — 3x12–15",
         "Face Pull — 4x12–20",
         "Incline Dumbbell Curl — 3x10–12",
         "Dumbbell Hammer Curl — 3x10–12",
         "Dumbbell Shrug — 3x10–15",
-        "Single-Arm Cable Curl — 3x12–15",
+        "Single Arm Cable Curl — 3x12–15",
         "Cardio: 15–20 min light"
     ],
     friday: [
         "Hack Squat — 4x8–12",
         "Leg Extension — 3x12–15",
-        "Lying Leg Curl — 4x10–15",
+        "Seated Leg Curl — 4x10–15",
         "Dumbbell Romanian Deadlift — 3x10–12",
         "Bulgarian Split Squat — 3x10–12",
         "Seated Calf Raise — 5x12–20",
@@ -109,7 +106,7 @@ const defaultTreinos = {
         "Dumbbell Lateral Raise — 6x15–20",
         "Alternating Dumbbell Curl — 4x10–15",
         "Dumbbell Triceps Kickback — 4x10–15",
-        "One-Arm Dumbbell Row — 4x Close to failure",
+        "One Arm Dumbbell Row — 4x Close to failure",
         "Dumbbell Reverse Fly — 3x15–20",
         "CORE: Lying Leg Raise — 3x15",
         "CORE: Abdominal Crunch — 3x12–15",
@@ -118,8 +115,25 @@ const defaultTreinos = {
     ]
 };
 
-let treinos = JSON.parse(localStorage.getItem('userTreinos')) || defaultTreinos;
-let checkedState = JSON.parse(localStorage.getItem('checkedState')) || {};
+// Atualizando para versão 3 (v3) para aplicar os novos nomes automaticamente
+// Mas copiando os dados antigos (v2) para que você não perca os kg salvos nem os checks.
+let weightsState = JSON.parse(localStorage.getItem('weightsState_v3'));
+if (!weightsState) {
+    weightsState = JSON.parse(localStorage.getItem('weightsState_v2')) || {};
+    localStorage.setItem('weightsState_v3', JSON.stringify(weightsState));
+}
+
+let checkedState = JSON.parse(localStorage.getItem('checkedState_v3'));
+if (!checkedState) {
+    checkedState = JSON.parse(localStorage.getItem('checkedState_v2')) || {};
+    localStorage.setItem('checkedState_v3', JSON.stringify(checkedState));
+}
+
+let treinos = JSON.parse(localStorage.getItem('userTreinos_v3'));
+if (!treinos) {
+    treinos = defaultTreinos; // Força a atualização para aplicar Seated Leg Curl e remover o ponto
+    localStorage.setItem('userTreinos_v3', JSON.stringify(treinos));
+}
 
 const daysMap = { sunday: 0, monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday: 5, saturday: 6 };
 
@@ -143,7 +157,7 @@ function validateCheckboxes() {
     }
     
     if (modified) {
-        localStorage.setItem('checkedState', JSON.stringify(checkedState));
+        localStorage.setItem('checkedState_v3', JSON.stringify(checkedState));
     }
 }
 
@@ -292,18 +306,27 @@ function renderSingleList(key, listId) {
 
     (treinos[key] || []).forEach((item, index) => {
         const isChecked = savedIndices.includes(index);
+        const savedWeight = weightsState[`${key}-${index}`] || '';
+        
         const li = document.createElement('li');
         li.className = `workout-item ${isChecked ? 'checked' : ''}`;
         li.style.order = isChecked ? 1000 + index : index;
+        
         li.innerHTML = `
             <div class="workout-info">
                 <input type="checkbox" onchange="moveItem(this, ${index}, '${key}')" ${isChecked ? 'checked' : ''}>
                 <span>${item}</span>
             </div>
+            <input type="text" class="weight-input" placeholder="kg" value="${savedWeight}" oninput="saveWeight('${key}', ${index}, this.value)" onclick="event.stopPropagation()">
             <button class="img-btn" onclick="openImage('${item.replace(/'/g, "\\'")}')">💪</button>
         `;
         listElement.appendChild(li);
     });
+}
+
+function saveWeight(day, index, value) {
+    weightsState[`${day}-${index}`] = value;
+    localStorage.setItem('weightsState_v3', JSON.stringify(weightsState));
 }
 
 function moveItem(checkbox, originalIndex, dayKey) {
@@ -328,7 +351,7 @@ function moveItem(checkbox, originalIndex, dayKey) {
         checkedState[dayKey].indices = checkedState[dayKey].indices.filter(i => i !== originalIndex);
     }
     
-    localStorage.setItem('checkedState', JSON.stringify(checkedState));
+    localStorage.setItem('checkedState_v3', JSON.stringify(checkedState));
 
     setTimeout(() => li.style.transform = "translateY(0)", 200);
     updateProgress();
@@ -389,12 +412,11 @@ function saveWorkout() {
     const text = document.getElementById('editWorkoutText').value;
     const newWorkout = text.split('\n').map(line => line.trim()).filter(line => line !== '');
     treinos[day] = newWorkout;
-    localStorage.setItem('userTreinos', JSON.stringify(treinos));
+    localStorage.setItem('userTreinos_v3', JSON.stringify(treinos));
     
-    // Clear checked state when workout is edited to prevent mismatch
     if (checkedState[day]) {
         checkedState[day].indices = [];
-        localStorage.setItem('checkedState', JSON.stringify(checkedState));
+        localStorage.setItem('checkedState_v3', JSON.stringify(checkedState));
     }
     
     renderLists();
@@ -402,12 +424,14 @@ function saveWorkout() {
     closeEdit();
 }
 
-function openImage(exerciseName) {
+function openImage(exerciseText) {
     const modal = document.getElementById('imageModal');
     const img = document.getElementById('exerciseImage');
     const noImg = document.getElementById('noImageText');
     
-    document.getElementById('imageModalTitle').innerText = exerciseName.split('—')[0].trim();
+    const exerciseName = exerciseText.split(/[-—–]/)[0].trim();
+    
+    document.getElementById('imageModalTitle').innerText = exerciseName;
 
     if (exerciseImages[exerciseName] && exerciseImages[exerciseName].trim() !== "") {
         img.src = exerciseImages[exerciseName];

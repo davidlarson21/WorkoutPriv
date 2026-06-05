@@ -71,6 +71,8 @@ body {
     max-width: 450px;
     display: flex;
     flex-direction: column;
+    flex: 1; 
+    min-height: 0;
 }
 
 .timer-card {
@@ -146,6 +148,7 @@ button {
     overflow: hidden;
     margin-bottom: 10px;
     align-items: stretch;
+    min-height: 0; 
 }
 
 .workout-card {
@@ -157,6 +160,7 @@ button {
     flex-grow: 1;
     border-top: 4px solid #ccff00;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    min-height: 0; 
 }
 
 .tabs {
@@ -193,6 +197,7 @@ button {
     display: none;
     flex-grow: 1;
     overflow: hidden;
+    min-height: 0; 
 }
 
 .tab-content.active {
@@ -237,6 +242,7 @@ button {
     display: flex;
     align-items: center;
     flex-grow: 1;
+    margin-right: 5px;
 }
 
 .workout-item:hover {
@@ -248,6 +254,7 @@ button {
     height: 20px;
     margin-right: 10px;
     accent-color: #ccff00;
+    flex-shrink: 0;
 }
 
 .workout-item.checked {
@@ -255,6 +262,24 @@ button {
     text-decoration: line-through;
     background: #121212;
     border-left: 2px solid transparent;
+}
+
+.weight-input {
+    width: 45px;
+    background: #121212;
+    border: 1px solid #333;
+    color: #ccff00;
+    border-radius: 6px;
+    padding: 4px;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-left: 5px;
+    transition: border-color 0.3s;
+}
+
+.weight-input:focus {
+    outline: none;
+    border-color: #9b5de5;
 }
 
 .vertical-progress-wrap {
